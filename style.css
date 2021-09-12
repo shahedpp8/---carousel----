@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f8ff;
+  font-family: "Lato", sans-serif;
+}
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+main {
+  width: 320px;
+  max-height: 450px;
+  height: calc(40vh);
+  background: white;
+  box-shadow: 0 10px 18px 0 rgba(171, 171, 171, 0.11);
+  position: relative;
+  overflow: hidden;
+}
+main::before {
+  content: '';
+  background: linear-gradient(to right, #24ec7c, #25ec7b);
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main #drag-wrapper {
+  max-width: 100%;
+  height: 100%;
+  white-space: nowrap;
+}
+main #drag-wrapper .drag-item {
+  width: 100%;
+  display: inline-flex;
+  height: 100%;
+  padding: 30px 40px;
+  white-space: normal;
+  vertical-align: top;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main #drag-wrapper .drag-item p {
+  font-size: 1.2em;
+  color: rgba(62, 65, 79, 0.84);
+  line-height: 1.5;
+  margin-top: 0;
+}
+main #drag-wrapper .drag-item footer {
+  display: flex;
+  align-items: center;
+  color: rgba(48, 50, 61, 0.88);
+}
+main #drag-wrapper .drag-item footer img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+  pointer-events: none;
+}
+main #drag-wrapper .drag-item footer span {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .9em;
+}
